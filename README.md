@@ -58,7 +58,7 @@
 <a href="https://github.com/ammarcho?tab=overview">
 <picture>
   <source media="(max-width: 600px)" srcset="assets/activity-mobile.svg" />
-  <img src="assets/activity.svg" width="100%" alt="Real GitHub contributions over the past year, active days, longest streak and public repository count. Updated daily. Contributions include more than commits. Open native GitHub activity." />
+  <img src="assets/activity.svg" width="100%" alt="Animated red and blue spider crawling through real GitHub contribution cells. The cells return when the animation loops. Past-year contributions, active days and longest streak update daily. Contributions include more than commits." />
 </picture>
 </a>
 

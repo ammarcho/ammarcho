@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - scripts/build_profile.py
+      - scripts/**
       - .github/workflows/refresh-profile.yml
 
 permissions:

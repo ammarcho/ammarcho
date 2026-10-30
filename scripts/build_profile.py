@@ -9,6 +9,7 @@ import urllib.request
 import argparse
 import time
 import math
+from spider_trail import render as render_spider_trail
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / 'assets'
@@ -238,6 +239,7 @@ def build_activity(days,repos,mobile=False):
     gx,gy = (x if mobile else x+18),282
     palette = ['#173669','#215DB5','#689FEC','#E86B81',RED]
     seen_month = None
+    cells = []
     for d in days:
         dt = date.fromisoformat(d['date'])
         if dt<first: continue
@@ -247,12 +249,14 @@ def build_activity(days,repos,mobile=False):
         if row==0 and dt.day<=7 and dt.month!=seen_month:
             c += text(xx,gy-14,dt.strftime('%b'),10 if mobile else 12,MUTED,mono=True)
             seen_month = dt.month
-        c += f'<rect x="{xx}" y="{yy}" width="{cell}" height="{cell}" rx="2" fill="{palette[d["level"]]}" stroke="{LINE}" stroke-width=".4"><title>{d["date"]}: {d["count"]} contributions</title></rect>'
+        cells.append(dict(d,col=col,row=row))
+    animation, trail_stats = render_spider_trail(cells,gx,gy,step,cell,palette)
+    c += animation
     y = gy+7*step+29
-    c += text(x,y,'Recent 26 weeks shown · totals cover past year' if mobile else 'Commits, pull requests, issues and other GitHub contributions.',12 if mobile else 15,MUTED)
+    c += text(x,y,'Spider trail · recent 26 weeks · loops automatically' if mobile else 'Spider trail / real contribution cells / crawl, collect, repeat.',11 if mobile else 15,MUTED)
     c += line(x,y+20,w-x,y+20)
     c += text(x,y+49,f'{repos} public repositories · updated {datetime.now(timezone.utc).strftime("%Y-%m-%d")} UTC',12 if mobile else 15,MUTED,mono=True)
-    save('activity'+('-mobile' if mobile else ''),w,y+74,c,f'GitHub activity over the past year: {total} contributions, {active} active days, longest streak {best} days. {repos} public repositories. Contributions include more than commits.')
+    save('activity'+('-mobile' if mobile else ''),w,y+74,c,f'Animated spider contribution trail. GitHub activity over the past year: {total} contributions, {active} active days, longest streak {best} days. {repos} public repositories. Contributions include more than commits.')
     return {'contributions':total,'active_days':active,'longest_streak':best,'public_repositories':repos}
 
 
@@ -279,7 +283,7 @@ def build_readme():
         alt = name+'. '+desc+' My contribution: '+role+' '+stack+'. '+((award+'. ') if award else '')+visibility+'.'
         parts.append(picture(slug,alt,href))
     parts += ['<a id="toolkit"></a>',picture('toolkit','AI and vision: Python, YOLO, OpenCV, Scikit-learn, XGBoost, Pandas, NumPy. Services and data: FastAPI, PostgreSQL, Supabase, SQLAlchemy, Docker. Web and desktop: TypeScript, React, Next.js, Node.js, Electron, Tailwind CSS.'),
-        '<a id="build-log"></a>',picture('activity','Real GitHub contributions over the past year, active days, longest streak and public repository count. Updated daily. Contributions include more than commits. Open native GitHub activity.','https://github.com/ammarcho?tab=overview'),
+        '<a id="build-log"></a>',picture('activity','Animated red and blue spider crawling through real GitHub contribution cells. The cells return when the animation loops. Past-year contributions, active days and longest streak update daily. Contributions include more than commits.','https://github.com/ammarcho?tab=overview'),
         picture('connect',"Let's build something useful. Explore Ammar's repositories.",'https://github.com/ammarcho?tab=repositories')]
     (ROOT/'README.md').write_text('\n\n'.join(parts)+'\n',encoding='utf-8')
 
