@@ -127,28 +127,28 @@ PROJECTS = [
     ('panen-cerdas','01','PanenCerdas','PREDICTIVE AGRICULTURE',
      'Harvest timing, yield and risk prediction from climate and satellite vegetation data.',
      'ML services, Random Forest models, feedback-driven retraining and rollback.',
-     'Python / FastAPI / Random Forest / NASA POWER','1st place · UNITY #14','PUBLIC REPOSITORY'),
+     'Python / FastAPI / Random Forest / NASA POWER','PUBLIC REPOSITORY'),
     ('prakira','02','PRAKIRA','CLIMATE & HEALTH',
      'Climate-sensitive disease early warning across 16 districts in Semarang.',
      'ML forecasting, time-series ensembles, backtesting and weather scenario simulation.',
-     'Python / FastAPI / XGBoost / Scikit-learn','3rd place · ANFORCOM DSDC','PUBLIC REPOSITORY'),
+     'Python / FastAPI / XGBoost / Scikit-learn','PUBLIC REPOSITORY'),
     ('pantas','03','PANTAS','COMPUTER VISION',
      'Produce grading for a horticulture marketplace connecting farmers and food industries.',
      'AI services with YOLOv11 segmentation, OpenCV grading rules and scale calibration.',
-     'YOLOv11 / OpenCV / FastAPI / Docker',None,'PRIVATE SOURCE'),
+     'YOLOv11 / OpenCV / FastAPI / Docker','PRIVATE SOURCE'),
     ('portal-scanning','04','PortalScanning','DETECTION & OCR',
      'License plate recognition and vehicle records from camera, video and image inputs.',
      'Built the full application: plate detection, OCR, interface and owner database.',
-     'YOLO / OpenCV / EasyOCR / React / PostgreSQL',None,'PRIVATE SOURCE'),
+     'YOLO / OpenCV / EasyOCR / React / PostgreSQL','PRIVATE SOURCE'),
     ('drawing-extractor','05','Drawing Data Extractor','DOCUMENT AUTOMATION',
      'Turn engineering PDF title blocks into structured drawing data for Excel.',
      'Built the desktop app, image preprocessing, OCR extraction and Excel export.',
-     'Electron / React / Python / OpenCV / Tesseract',None,'PRIVATE SOURCE'),
+     'Electron / React / Python / OpenCV / Tesseract','PRIVATE SOURCE'),
 ]
 
 
 def build_project(project, mobile=False):
-    slug,number,name,category,desc,role,stack,award,visibility = project
+    slug,number,name,category,desc,role,stack,visibility = project
     w,x = (440,24) if mobile else (960,34)
     c = text(x,38,number+' / '+category,12 if mobile else 14,ACCENT,600,True)
     c += text(x,83,name,29 if mobile else 34,WHITE,700)
@@ -159,9 +159,6 @@ def build_project(project, mobile=False):
     c += s + line(x,y+3,w-x,y+3)
     s,y = paragraphs(x,y+32,stack,44 if mobile else 100,14 if mobile else 17,22)
     c += s
-    if award:
-        c += text(x,y+15,award,15 if mobile else 18,GOLD,600)
-        y += 31
     if mobile:
         c += text(x,y+12,visibility,11,MUTED,mono=True)
         y += 26
@@ -278,9 +275,9 @@ def build_readme():
         picture('about','Muhammad Choirudin Ammar. Information Technology student at UGM building AI services, vision pipelines and practical applications. Exploring deep learning, YOLO, OpenCV and AI agents.'),
         '<a id="selected-work"></a>',picture('selected-work','02 / Selected work. AI services, vision pipelines and practical applications.')]
     for project in PROJECTS:
-        slug,number,name,category,desc,role,stack,award,visibility = project
+        slug,number,name,category,desc,role,stack,visibility = project
         href = 'https://github.com/astrorehan/'+slug if slug in ['panen-cerdas','prakira'] else None
-        alt = name+'. '+desc+' My contribution: '+role+' '+stack+'. '+((award+'. ') if award else '')+visibility+'.'
+        alt = name+'. '+desc+' My contribution: '+role+' '+stack+'. '+visibility+'.'
         parts.append(picture(slug,alt,href))
     parts += ['<a id="toolkit"></a>',picture('toolkit','AI and vision: Python, YOLO, OpenCV, Scikit-learn, XGBoost, Pandas, NumPy. Services and data: FastAPI, PostgreSQL, Supabase, SQLAlchemy, Docker. Web and desktop: TypeScript, React, Next.js, Node.js, Electron, Tailwind CSS.'),
         '<a id="build-log"></a>',picture('activity','Animated red and blue spider crawling through real GitHub contribution cells. The cells return when the animation loops. Past-year contributions, active days and longest streak update daily. Contributions include more than commits.','https://github.com/ammarcho?tab=overview'),

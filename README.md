@@ -20,14 +20,14 @@
 <a href="https://github.com/astrorehan/panen-cerdas">
 <picture>
   <source media="(max-width: 600px)" srcset="assets/panen-cerdas-mobile.svg" />
-  <img src="assets/panen-cerdas.svg" width="100%" alt="PanenCerdas. Harvest timing, yield and risk prediction from climate and satellite vegetation data. My contribution: ML services, Random Forest models, feedback-driven retraining and rollback. Python / FastAPI / Random Forest / NASA POWER. 1st place · UNITY #14. PUBLIC REPOSITORY." />
+  <img src="assets/panen-cerdas.svg" width="100%" alt="PanenCerdas. Harvest timing, yield and risk prediction from climate and satellite vegetation data. My contribution: ML services, Random Forest models, feedback-driven retraining and rollback. Python / FastAPI / Random Forest / NASA POWER. PUBLIC REPOSITORY." />
 </picture>
 </a>
 
 <a href="https://github.com/astrorehan/prakira">
 <picture>
   <source media="(max-width: 600px)" srcset="assets/prakira-mobile.svg" />
-  <img src="assets/prakira.svg" width="100%" alt="PRAKIRA. Climate-sensitive disease early warning across 16 districts in Semarang. My contribution: ML forecasting, time-series ensembles, backtesting and weather scenario simulation. Python / FastAPI / XGBoost / Scikit-learn. 3rd place · ANFORCOM DSDC. PUBLIC REPOSITORY." />
+  <img src="assets/prakira.svg" width="100%" alt="PRAKIRA. Climate-sensitive disease early warning across 16 districts in Semarang. My contribution: ML forecasting, time-series ensembles, backtesting and weather scenario simulation. Python / FastAPI / XGBoost / Scikit-learn. PUBLIC REPOSITORY." />
 </picture>
 </a>
 
