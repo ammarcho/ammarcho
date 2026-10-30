@@ -1,6 +1,6 @@
 <picture>
   <source media="(max-width: 600px)" srcset="assets/applied-ai-lab-mobile.svg" />
-  <img src="assets/applied-ai-lab.svg" width="100%" alt="Hi, I&#x27;m Ammar. Applied AI Lab. Turning models into useful tools. Information Technology at UGM." />
+  <img src="assets/applied-ai-lab.svg" width="100%" alt="Hi, I&#x27;m Ammar. Your friendly neighborhood AI builder. Classic Spider-Man red and blue. Information Technology at UGM." />
 </picture>
 
 <p align="center"><a href="#selected-work">Selected work</a> &nbsp; / &nbsp; <a href="#toolkit">Toolkit</a> &nbsp; / &nbsp; <a href="#build-log">Build log</a> &nbsp; / &nbsp; <a href="https://www.instagram.com/xyammar/">Connect ↗</a></p>
