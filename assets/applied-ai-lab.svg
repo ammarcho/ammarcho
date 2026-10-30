@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Ammar — Applied AI Lab</title>
+  <desc id="desc">A navy and teal banner with a computer vision detection frame and a connected model diagram. Computer vision, predictive systems, practical tools.</desc>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" stroke="#20333E" stroke-width=".7"/></pattern>
+    <radialGradient id="glow"><stop stop-color="#144B49" stop-opacity=".65"/><stop offset="1" stop-color="#0D1117" stop-opacity="0"/></radialGradient>
+    <linearGradient id="accent" x1="48" y1="0" x2="1150" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#2DD4BF"/><stop offset=".65" stop-color="#2DD4BF" stop-opacity=".15"/><stop offset="1" stop-color="#FBBF24" stop-opacity=".6"/></linearGradient>
+  </defs>
+  <rect width="1200" height="380" rx="20" fill="#0D1117"/>
+  <rect x="680" width="520" height="380" fill="url(#grid)"/>
+  <ellipse cx="948" cy="185" rx="300" ry="250" fill="url(#glow)"/>
+  <path d="M48 43H1152" stroke="url(#accent)"/>
+  <circle cx="56" cy="76" r="4" fill="#2DD4BF"/>
+  <text x="71" y="81" fill="#8FA8B3" font-family="Consolas, monospace" font-size="13" letter-spacing="2.3">AMMARCHO / APPLIED AI LAB</text>
+  <text x="48" y="176" fill="#E6EDF3" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="78" letter-spacing="-3">Hi, I'm Ammar.</text>
+  <text x="52" y="219" fill="#2DD4BF" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="600">Turning models into useful tools.</text>
+  <text x="52" y="259" fill="#A9BAC5" font-family="Segoe UI, Arial, sans-serif" font-size="17">Computer vision · Predictive systems · Practical AI</text>
+  <rect x="52" y="300" width="225" height="28" rx="14" fill="#15252C" stroke="#29424B"/>
+  <text x="68" y="319" fill="#BFCDD5" font-family="Consolas, monospace" font-size="12">INFORMATION TECHNOLOGY / UGM</text>
+  <g opacity=".6" stroke="#477480" stroke-width="1.4">
+    <path d="M828 113L932 157L1046 108M828 113L933 224L1046 108M818 245L932 157L1060 251M818 245L933 224L1060 251M932 157L933 224"/>
+  </g>
+  <g fill="#0F242B" stroke="#64A4AB" stroke-width="1.5">
+    <circle cx="828" cy="113" r="10"/><circle cx="818" cy="245" r="10"/><circle cx="1046" cy="108" r="10"/><circle cx="1060" cy="251" r="10"/>
+  </g>
+  <rect x="883" y="124" width="100" height="129" rx="16" fill="#102B31" fill-opacity=".9" stroke="#2DD4BF" stroke-opacity=".4"/>
+  <path d="M907 158H959M907 175H947M907 192H959M907 209H937" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="958" cy="223" r="4" fill="#FBBF24"/>
+  <path d="M785 133V80H845M1028 80H1090V133M1090 237V290H1030M845 290H785V237" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round"/>
+  <rect x="785" y="54" width="125" height="26" rx="4" fill="#2DD4BF"/>
+  <text x="797" y="72" fill="#0D1117" font-family="Consolas, monospace" font-size="12" font-weight="700">VISION / MODEL</text>
+  <text x="785" y="321" fill="#83A5AE" font-family="Consolas, monospace" font-size="12" letter-spacing="1.2">BUILD · EVALUATE · ITERATE</text>
+  <path d="M48 352H1152" stroke="#24343F"/>
+</svg>
